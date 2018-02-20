@@ -142,6 +142,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:ems="10"
+      android:maxLength="20"
       android:hint="Password"
       android:inputType="numberPassword"
       />
@@ -163,7 +164,7 @@
       >
 
     <TextView
-        android:id="@+id/etForgotPassword"
+        android:id="@+id/tvForgotPassword"
         android:paddingTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
