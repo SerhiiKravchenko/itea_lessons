@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
     }
     bLoginButon.setText("Log in");
     bLoginButon.setAllCaps(false);
-    bLoginButon.setBackgroundColor(Color.GREEN);
+    bLoginButon.setBackgroundColor(Color.parseColor("#ff669900"));
     bLoginButon.setTextColor(Color.WHITE);
     llRoot.addView(bLoginButon);
 
