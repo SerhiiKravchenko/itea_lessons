@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingRight="15dp"
-    android:paddingLeft="15dp"
     android:background="@drawable/blue_christmas_background"
     android:gravity="bottom"
     android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
     android:weightSum="12"
     tools:context="ua.org.skravchenko.lesson2.MainActivity"
     >
@@ -18,10 +18,10 @@
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="2"
-      android:textColor="@android:color/white"
-      android:textAlignment="center"
-      android:textSize="30sp"
       android:text="Hello again"
+      android:textAlignment="center"
+      android:textColor="@android:color/white"
+      android:textSize="30sp"
       />
   <LinearLayout
       android:layout_width="match_parent"
@@ -33,72 +33,59 @@
         android:id="@+id/tvSignInUsing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Sign in using"
         android:textColor="@android:color/white"
         android:textSize="15sp"
-        android:text="Sign in using"
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
         android:weightSum="2"
-        android:baselineAligned="false">
+        >
 
-      <LinearLayout
+      <Button
+          android:id="@+id/bGooglePlusLogin"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:orientation="horizontal"
-          >
-
-        <Button
-            android:id="@+id/bGooglePlusLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="Google"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            android:textColor="@android:color/white"
-            android:textAllCaps="false"
-            android:background="#dd4b39"
-            android:drawableLeft="@drawable/google_plus_ico"
-            android:drawableStart="@drawable/google_plus_ico"
-            />
-      </LinearLayout>
-      <LinearLayout
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:orientation="horizontal"
+          android:background="#dd4b39"
+          android:drawableLeft="@drawable/google_plus_ico"
+          android:drawableStart="@drawable/google_plus_ico"
+          android:padding="5dp"
+          android:text="Google"
+          android:textAlignment="center"
+          android:textAllCaps="false"
+          android:textColor="@android:color/white"
+          android:textSize="15sp"
+          />
+      <Button
+          android:id="@+id/bFacebookLogin"
           android:layout_marginLeft="10dp"
-          android:layout_marginStart="10dp">
-
-        <Button
-            android:id="@+id/bFacebookLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:textSize="15sp"
-            android:text="Facebook"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textAllCaps="false"
-            android:background="#3b5998"
-            android:drawableLeft="@drawable/facebook_ico"
-            android:drawableStart="@drawable/facebook_ico"
-            />
-      </LinearLayout>
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="#3b5998"
+          android:drawableLeft="@drawable/facebook_ico"
+          android:drawableStart="@drawable/facebook_ico"
+          android:padding="5dp"
+          android:text="Facebook"
+          android:textAlignment="center"
+          android:textAllCaps="false"
+          android:textColor="@android:color/white"
+          android:textSize="15sp"
+          />
     </LinearLayout>
 
   </LinearLayout>
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
+      android:layout_marginTop="15dp"
       android:layout_weight="1"
       android:orientation="horizontal"
-      android:layout_marginTop="15dp"
       android:weightSum="9"
       >
     <View
@@ -113,11 +100,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
         android:layout_weight="1"
         android:text="or"
+        android:textAlignment="center"
         android:textAllCaps="true"
+        android:textColor="@android:color/white"
         />
     <View
         android:layout_width="0dp"
@@ -142,9 +129,9 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:ems="10"
-      android:maxLength="20"
       android:hint="Password"
       android:inputType="numberPassword"
+      android:maxLength="20"
       />
   <Button
       android:id="@+id/bLogin"
@@ -152,9 +139,9 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="10dp"
       android:background="@android:color/holo_green_dark"
-      android:textColor="@android:color/white"
-      android:textAllCaps="false"
       android:text="Log in"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
       />
   <LinearLayout
       android:layout_width="match_parent"
@@ -165,9 +152,9 @@
 
     <TextView
         android:id="@+id/tvForgotPassword"
-        android:paddingTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="10dp"
         android:text="Forgot your password?"
         android:textAlignment="center"
         />
@@ -182,32 +169,33 @@
           android:id="@+id/bSignUp"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_gravity="bottom"
           android:layout_weight="1"
           android:background="@android:color/transparent"
-          android:textColor="@android:color/black"
-          android:layout_gravity="bottom"
-          android:textAllCaps="false"
           android:text="Sign up"
+          android:textAllCaps="false"
+          android:textColor="@android:color/black"
           />
       <View
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_weight="4">
+          android:layout_weight="4"
+          >
 
       </View>
 
 
-        <Button
-            android:id="@+id/bTerms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:textColor="@android:color/black"
-            android:layout_gravity="bottom"
-            android:textAllCaps="false"
-            android:text="Terms"
-            />
+      <Button
+          android:id="@+id/bTerms"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="bottom"
+          android:layout_weight="1"
+          android:background="@android:color/transparent"
+          android:text="Terms"
+          android:textAllCaps="false"
+          android:textColor="@android:color/black"
+          />
 
     </LinearLayout>
   </LinearLayout>
