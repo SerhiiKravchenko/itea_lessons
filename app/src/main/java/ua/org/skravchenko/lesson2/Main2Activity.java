@@ -1,5 +1,6 @@
 package ua.org.skravchenko.lesson2;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -23,8 +24,7 @@ public class Main2Activity extends AppCompatActivity {
   private int bColor = 255;
   private View vColorScreen;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
+  @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main2);
 
@@ -48,17 +48,29 @@ public class Main2Activity extends AppCompatActivity {
     sbBColor.setOnSeekBarChangeListener(seekBarChangeListener);
 
     bPrevActivity.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-
+      @Override public void onClick(View view) {
+        Intent intent = new Intent();
+        intent.putExtra(MainActivity.R_COLOR_STRING,sbRColor.getProgress());
+        intent.putExtra(MainActivity.G_COLOR_STRING,sbGColor.getProgress());
+        intent.putExtra(MainActivity.B_COLOR_STRING,sbBColor.getProgress());
+        setResult(Activity.RESULT_OK,intent);
+        finish();
       }
     });
 
+    Intent intent = getIntent();
+    Bundle bundle = intent.getExtras();
+    int rColorFromIntent = bundle.getInt(MainActivity.R_COLOR_STRING, 255);
+    int gColorFromIntent = bundle.getInt(MainActivity.G_COLOR_STRING,255);
+    int bColorFromIntent = bundle.getInt(MainActivity.B_COLOR_STRING,255);
+
+    sbRColor.setProgress(rColorFromIntent);
+    sbGColor.setProgress(gColorFromIntent);
+    sbBColor.setProgress(bColorFromIntent);
+
     etRColor.setOnKeyListener(new View.OnKeyListener() {
-      @Override
-      public boolean onKey(View view, int i, KeyEvent keyEvent) {
-        if (keyEvent.getAction() == KeyEvent.ACTION_DOWN &&
-            (i == KeyEvent.KEYCODE_ENTER)) {
+      @Override public boolean onKey(View view, int i, KeyEvent keyEvent) {
+        if (keyEvent.getAction() == KeyEvent.ACTION_DOWN && (i == KeyEvent.KEYCODE_ENTER)) {
           sbRColor.setProgress(Integer.parseInt(etRColor.getText().toString()));
 
           return true;
@@ -68,10 +80,8 @@ public class Main2Activity extends AppCompatActivity {
       }
     });
     etGColor.setOnKeyListener(new View.OnKeyListener() {
-      @Override
-      public boolean onKey(View view, int i, KeyEvent keyEvent) {
-        if (keyEvent.getAction() == KeyEvent.ACTION_DOWN &&
-            (i == KeyEvent.KEYCODE_ENTER)) {
+      @Override public boolean onKey(View view, int i, KeyEvent keyEvent) {
+        if (keyEvent.getAction() == KeyEvent.ACTION_DOWN && (i == KeyEvent.KEYCODE_ENTER)) {
           sbGColor.setProgress(Integer.parseInt(etGColor.getText().toString()));
 
           return true;
@@ -81,10 +91,8 @@ public class Main2Activity extends AppCompatActivity {
       }
     });
     etBColor.setOnKeyListener(new View.OnKeyListener() {
-      @Override
-      public boolean onKey(View view, int i, KeyEvent keyEvent) {
-        if (keyEvent.getAction() == KeyEvent.ACTION_DOWN &&
-            (i == KeyEvent.KEYCODE_ENTER)) {
+      @Override public boolean onKey(View view, int i, KeyEvent keyEvent) {
+        if (keyEvent.getAction() == KeyEvent.ACTION_DOWN && (i == KeyEvent.KEYCODE_ENTER)) {
           sbBColor.setProgress(Integer.parseInt(etBColor.getText().toString()));
 
           return true;
@@ -93,26 +101,22 @@ public class Main2Activity extends AppCompatActivity {
         return false;
       }
     });
-
-
   }
 
-  private SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-      updateColor();
-    }
+  private SeekBar.OnSeekBarChangeListener seekBarChangeListener =
+      new SeekBar.OnSeekBarChangeListener() {
+        @Override public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+          updateColor();
+        }
 
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
+        @Override public void onStartTrackingTouch(SeekBar seekBar) {
 
-    }
+        }
 
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
+        @Override public void onStopTrackingTouch(SeekBar seekBar) {
 
-    }
-  };
+        }
+      };
 
   private void updateColor() {
     rColor = sbRColor.getProgress();
@@ -124,6 +128,5 @@ public class Main2Activity extends AppCompatActivity {
     etBColor.setText(String.format("%d", bColor));
 
     vColorScreen.setBackgroundColor(Color.rgb(rColor, gColor, bColor));
-
   }
 }
