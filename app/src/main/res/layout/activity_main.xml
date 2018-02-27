@@ -1,202 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue_christmas_background"
-    android:gravity="bottom"
+    android:layout_margin="20dp"
     android:orientation="vertical"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:weightSum="12"
-    tools:context="ua.org.skravchenko.lesson2.MainActivity"
-    >
+    android:weightSum="8"
+    tools:context="ua.org.skravchenko.lesson4.MainActivity">
 
-  <TextView
-      android:id="@+id/tvGreating"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="2"
-      android:text="Hello again"
-      android:textAlignment="center"
-      android:textColor="@android:color/white"
-      android:textSize="30sp"
-      />
-  <LinearLayout
+  <View
+      android:id="@+id/vColorScreen"
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="3"
-      android:orientation="vertical"
-      >
-    <TextView
-        android:id="@+id/tvSignInUsing"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign in using"
-        android:textColor="@android:color/white"
-        android:textSize="15sp"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        >
+      android:background="@android:color/white" />
 
-      <Button
-          android:id="@+id/bGooglePlusLogin"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:background="#dd4b39"
-          android:drawableLeft="@drawable/google_plus_ico"
-          android:drawableStart="@drawable/google_plus_ico"
-          android:padding="5dp"
-          android:text="Google"
-          android:textAlignment="center"
-          android:textAllCaps="false"
-          android:textColor="@android:color/white"
-          android:textSize="15sp"
-          />
-      <Button
-          android:id="@+id/bFacebookLogin"
-          android:layout_marginLeft="10dp"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:background="#3b5998"
-          android:drawableLeft="@drawable/facebook_ico"
-          android:drawableStart="@drawable/facebook_ico"
-          android:padding="5dp"
-          android:text="Facebook"
-          android:textAlignment="center"
-          android:textAllCaps="false"
-          android:textColor="@android:color/white"
-          android:textSize="15sp"
-          />
-    </LinearLayout>
-
-  </LinearLayout>
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:layout_marginTop="15dp"
-      android:layout_weight="1"
-      android:orientation="horizontal"
-      android:weightSum="9"
-      >
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:layout_weight="4"
-        android:background="#808080"
-        >
-    </View>
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:text="or"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@android:color/white"
-        />
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_gravity="center"
-        android:layout_weight="4"
-        android:background="#808080"
-        >
-
-    </View>
-  </LinearLayout>
-  <EditText
-      android:id="@+id/etEmail"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:ems="10"
-      android:hint="E-mail"
-      android:inputType="textEmailAddress"
-      />
-  <EditText
-      android:id="@+id/etPasswordNumeric"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:ems="10"
-      android:hint="Password"
-      android:inputType="numberPassword"
-      android:maxLength="20"
-      />
-  <Button
-      android:id="@+id/bLogin"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
       android:layout_marginTop="10dp"
-      android:background="@android:color/holo_green_dark"
-      android:text="Log in"
-      android:textAllCaps="false"
-      android:textColor="@android:color/white"
-      />
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="4"
-      android:orientation="vertical"
-      >
+      android:layout_weight="3"
+      android:orientation="horizontal"
+      android:weightSum="3">
 
-    <TextView
-        android:id="@+id/tvForgotPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:text="Forgot your password?"
-        android:textAlignment="center"
-        />
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="6"
-        >
-      <Button
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-          android:id="@+id/bSignUp"
-          android:layout_width="wrap_content"
+      <TextView
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_gravity="bottom"
-          android:layout_weight="1"
-          android:background="@android:color/transparent"
-          android:text="Sign up"
-          android:textAllCaps="false"
-          android:textColor="@android:color/black"
-          />
-      <View
-          android:layout_width="wrap_content"
+          android:gravity="center"
+          android:text="r"
+          android:textAllCaps="true" />
+
+      <EditText
+          android:id="@+id/etRColor"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_weight="4"
-          >
-
-      </View>
-
-
-      <Button
-          android:id="@+id/bTerms"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="bottom"
-          android:layout_weight="1"
-          android:background="@android:color/transparent"
-          android:text="Terms"
-          android:textAllCaps="false"
-          android:textColor="@android:color/black"
-          />
+          android:gravity="center"
+          android:inputType="number"
+          android:maxLength="3"
+          android:text="255" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="g"
+          android:textAllCaps="true" />
+
+      <EditText
+          android:id="@+id/etGColor"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:inputType="number"
+          android:maxLength="3"
+          android:text="255" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="b"
+          android:textAllCaps="true" />
+
+      <EditText
+          android:id="@+id/etBColor"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:inputType="number"
+          android:maxLength="3"
+          android:text="255" />
+
+    </LinearLayout>
+
+
   </LinearLayout>
+
+  <Button
+      android:id="@+id/bNextActivity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="Next activity" />
+
 </LinearLayout>

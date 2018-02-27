@@ -1,11 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ua.org.skravchenko.lesson2.Main2Activity"
-    >
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:weightSum="8"
+    tools:context="ua.org.skravchenko.lesson4.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+  <View
+      android:id="@+id/vColorScreen"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="3"
+      android:background="@android:color/white" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="10dp"
+      android:layout_weight="2"
+      android:orientation="horizontal"
+      android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:text="r"
+          android:textAllCaps="true" />
+
+      <EditText
+          android:id="@+id/etRColor"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:inputType="number"
+          android:text="255" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="g"
+          android:textAllCaps="true" />
+
+      <EditText
+          android:id="@+id/etGColor"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:inputType="number"
+          android:text="255" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="b"
+          android:textAllCaps="true" />
+
+      <EditText
+          android:id="@+id/etBColor"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:inputType="number"
+          android:text="255" />
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="3"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="r"
+          android:textAllCaps="true" />
+
+      <SeekBar
+          android:id="@+id/sbRColor"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="6"
+          android:max="255"
+          android:progress="1" />
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="255" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="g"
+          android:textAllCaps="true" />
+
+      <SeekBar
+          android:id="@+id/sbGColor"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="6"
+          android:max="255"
+          android:progress="1" />
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="255" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="b"
+          android:textAllCaps="true" />
+
+      <SeekBar
+          android:id="@+id/sbBColor"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="6"
+          android:max="255"
+          android:progress="1" />
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="255" />
+
+    </LinearLayout>
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/bPrevActivity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="previus activity" />
+
+</LinearLayout>
