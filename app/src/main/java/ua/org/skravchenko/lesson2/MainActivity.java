@@ -10,32 +10,28 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-  EditText etLoginName;
-  EditText etPassword;
-  Button bLogin;
-
+  private EditText etLoginName;
+  private EditText etPassword;
+  private Button bLogin;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    bLogin = (Button)findViewById(R.id.bLogin);
-    etPassword = (EditText)findViewById(R.id.etPassword);
+    bLogin = (Button) findViewById(R.id.bLogin);
+    etPassword = (EditText) findViewById(R.id.etPassword);
 
     bLogin.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {
-        if(TextUtils.isEmpty(etPassword.getText())){
+        if (TextUtils.isEmpty(etPassword.getText())) {
           etPassword.setError("Enter password please!!!");
-        }else if (etPassword.getText().length()<6){
+        } else if (etPassword.getText().length() < 6) {
           etPassword.setError("Enter please more than 6 digits!!!");
-        }else{
-          Intent intent = new Intent(getApplicationContext(),BookList.class);
+        } else {
+          Intent intent = new Intent(getApplicationContext(), BookList.class);
           startActivity(intent);
         }
       }
     });
-
   }
-
-
 }
