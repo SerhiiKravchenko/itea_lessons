@@ -2,106 +2,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical"
-    android:weightSum="8"
-    tools:context="ua.org.skravchenko.lesson4.MainActivity">
-
+    android:weightSum="9"
+    tools:context="ua.org.skravchenko.lesson2.MainActivity"
+    >
+  <ImageView
+      android:id="@+id/ivLogo"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_gravity="center"
+      android:layout_weight="4"
+      tools:srcCompact="@drawable/ic_launcher_foreground"
+      />
+  <EditText
+      android:id="@+id/etLoginName"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:ems="10"
+      android:hint="LOGIN"
+      android:inputType="textPersonName"
+      />
+  <EditText
+      android:id="@+id/etPassword"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:ems="10"
+      android:hint="PASSWORD"
+      android:inputType="numberPassword"
+      android:maxLength="30"
+      />
   <View
-      android:id="@+id/vColorScreen"
-      android:layout_width="match_parent"
+      android:layout_width="wrap_content"
       android:layout_height="0dp"
-      android:layout_weight="3"
-      android:background="@android:color/white" />
+      android:layout_weight="2"
+      >
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_marginTop="10dp"
-      android:layout_weight="3"
-      android:orientation="horizontal"
-      android:weightSum="3">
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          android:text="r"
-          android:textAllCaps="true" />
-
-      <EditText
-          android:id="@+id/etRColor"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          android:inputType="number"
-          android:maxLength="3"
-          android:text="255" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          android:text="g"
-          android:textAllCaps="true" />
-
-      <EditText
-          android:id="@+id/etGColor"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          android:inputType="number"
-          android:maxLength="3"
-          android:text="255" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          android:text="b"
-          android:textAllCaps="true" />
-
-      <EditText
-          android:id="@+id/etBColor"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          android:inputType="number"
-          android:maxLength="3"
-          android:text="255" />
-
-    </LinearLayout>
-
-
-  </LinearLayout>
-
+  </View>
   <Button
-      android:id="@+id/bNextActivity"
+      android:id="@+id/bLogin"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:text="login"
       android:layout_gravity="center"
-      android:text="Next activity" />
+      />
+
 
 </LinearLayout>
