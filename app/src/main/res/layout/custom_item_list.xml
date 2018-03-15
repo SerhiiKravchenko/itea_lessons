@@ -4,6 +4,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/llCustom"
     >
   <ImageView
       android:id="@+id/ivImage"
@@ -35,6 +36,9 @@
         android:id="@+id/rbBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+
         />
   </LinearLayout>
 

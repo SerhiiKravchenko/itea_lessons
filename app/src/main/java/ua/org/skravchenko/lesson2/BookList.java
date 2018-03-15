@@ -1,7 +1,11 @@
 package ua.org.skravchenko.lesson2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +13,8 @@ import java.util.List;
 public class BookList extends AppCompatActivity {
 
   private List<Book> listBooks = new ArrayList<>();
-  private BookListAdapter lAdapter;
-  private ListView lv;
+  public static BookListAdapter lAdapter;
+  public static ListView lv;
 
   private static String[] names = {"Shelton", "Georgianna", "Hector", "Gerald", "Margit", "Fiona", "Gilberte", "Cordia",
       "Lasonya", "Ernie", "Lucile", "Daniel", "Bev", "Eddy", "Valene", "Idell"};
@@ -49,5 +53,6 @@ public class BookList extends AppCompatActivity {
     }
     lAdapter = new BookListAdapter(this,R.layout.custom_item_list,listBooks);
     lv.setAdapter(lAdapter);
+
   }
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ua.org.skravchenko.lesson2.BookPreview"
+    >
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+    <ImageView
+        android:id="@+id/ivSingleUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:srcCompat="@mipmap/ic_launcher"
+        android:padding="10dp"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+      <TextView
+          android:id="@+id/tvSingleItemName"
+          android:text="BookName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+      <TextView
+          android:id="@+id/tvSingleItemAuthor"
+          android:text="BookAuthor"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+
+      <RatingBar
+          android:id="@+id/rbSingleRating"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          />
+    </LinearLayout>
+
+  </LinearLayout>
+  <TextView
+      android:id="@+id/tvSingleDescription"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+</LinearLayout>
